@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102943"/><stop offset="1" stop-color="#03070d"/></linearGradient></defs>
+<rect width="1200" height="650" fill="url(#g)"/>
+<circle cx="1010" cy="120" r="210" fill="#e58a4d" opacity=".12"/>
+<circle cx="170" cy="560" r="280" fill="#e58a4d" opacity=".08"/>
+<path d="M0 540 L1200 420" stroke="#e58a4d" stroke-width="3" opacity=".45"/>
+<path d="M0 575 L1200 455" stroke="#fff" stroke-width="1" opacity=".12"/>
+<text x="90" y="280" fill="#fff" font-family="Arial,sans-serif" font-size="66" font-weight="700">HOME AUTOMATION</text>
+<text x="94" y="345" fill="#e58a4d" font-family="Arial,sans-serif" font-size="27" font-weight="700">Lighting • HVAC • Smart Control</text>
+<text x="94" y="405" fill="#b9c6d2" font-family="Arial,sans-serif" font-size="20">APEXSTAR MIDDLE EAST FZ LLC • UAE</text>
+</svg>

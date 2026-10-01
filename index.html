@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="APEXSTAR Middle East FZ LLC - Fire & Life Safety Products, Fire Protection and Technical Solutions in Ras Al Khaimah, UAE.">
+<title>APEXSTAR Middle East FZ LLC | Fire & Life Safety Products</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#07172b; --navy2:#0b2440; --blue:#123e68;
+  --copper:#c86d36; --copper2:#e58a4d;
+  --white:#fff; --muted:#aebdca; --light:#f4f7fa;
+  --dark:#050b13; --line:rgba(255,255,255,.12);
+  --shadow:0 18px 55px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,Arial,sans-serif;background:var(--dark);color:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{background:#03070d;border-bottom:1px solid rgba(255,255,255,.08);font-size:12px;color:#c9d3dc}
+.topbar .inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.toplinks{display:flex;gap:22px}
+header{position:absolute;top:38px;left:0;width:100%;z-index:20;background:rgba(3,10,18,.45);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{width:215px;max-height:65px;object-fit:contain}
+nav{display:flex;align-items:center;gap:25px}
+nav a{font-size:13px;font-weight:600;letter-spacing:.2px;color:#fff;opacity:.92}
+nav a:hover{color:var(--copper2)}
+.quote-btn{background:linear-gradient(135deg,var(--copper),var(--copper2));padding:12px 18px;border-radius:5px;font-weight:700;color:#07111d;box-shadow:0 8px 25px rgba(200,109,54,.25)}
+.menu-btn{display:none;border:0;background:none;color:#fff;font-size:28px;cursor:pointer}
+
+.hero{min-height:790px;display:flex;align-items:center;position:relative;overflow:hidden;background:
+radial-gradient(circle at 75% 35%,rgba(200,109,54,.22),transparent 28%),
+linear-gradient(90deg,rgba(2,8,15,.97) 0%,rgba(4,16,29,.88) 48%,rgba(4,14,25,.65) 100%),
+url("images/hero.svg") center/cover;}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(transparent,var(--dark));}
+.hero-content{position:relative;z-index:2;padding-top:100px;max-width:770px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700;color:var(--copper2);margin-bottom:20px}
+.eyebrow:before{content:"";width:38px;height:2px;background:var(--copper2)}
+h1{font-family:Montserrat,sans-serif;font-size:clamp(44px,6vw,78px);line-height:1.03;letter-spacing:-2px;margin-bottom:24px}
+h1 span{color:var(--copper2)}
+.hero p{font-size:18px;color:#d3dde5;max-width:650px;margin-bottom:34px}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:5px;font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,.18)}
+.btn.primary{background:linear-gradient(135deg,var(--copper),var(--copper2));color:#07111d;border-color:transparent}
+.btn.secondary{background:rgba(255,255,255,.05)}
+.btn.secondary:hover{background:rgba(255,255,255,.1)}
+.stats{position:absolute;z-index:3;bottom:45px;right:4%;display:flex;gap:35px}
+.stat strong{display:block;font-size:28px;color:#fff}
+.stat span{font-size:11px;color:#aebdca;text-transform:uppercase;letter-spacing:1px}
+
+section{padding:95px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
+.kicker{color:var(--copper2);font-size:11px;text-transform:uppercase;letter-spacing:2.5px;font-weight:800;margin-bottom:9px}
+.section-head h2{font-family:Montserrat;font-size:clamp(30px,4vw,48px);line-height:1.1}
+.section-head p{color:#9eabb7;max-width:510px;font-size:14px}
+.light{background:var(--light);color:#07172b}
+.light .section-head p{color:#607080}
+
+.trade-strip{background:#fff;color:#07172b;border-top:1px solid #e5e9ed;border-bottom:1px solid #e5e9ed;padding:38px 0}
+.trade-inner{display:flex;justify-content:space-between;align-items:center;gap:35px}
+.trade-inner h2{font-family:Montserrat;font-size:30px}
+.trade-points{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}
+.trade-points span{font-size:11px;font-weight:700;color:#33495c;border:1px solid #dbe2e8;border-radius:20px;padding:8px 12px}
+.products{background:#081526}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.card{background:linear-gradient(145deg,#102943,#081726);border:1px solid rgba(255,255,255,.09);padding:27px;border-radius:8px;min-height:245px;transition:.3s;position:relative;overflow:hidden}
+.card:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(200,109,54,.12);right:-45px;top:-45px}
+.card:hover{transform:translateY(-6px);border-color:rgba(229,138,77,.5);box-shadow:var(--shadow)}
+.icon{width:48px;height:48px;border-radius:8px;background:rgba(200,109,54,.12);display:grid;place-items:center;color:var(--copper2);font-size:23px;margin-bottom:22px}
+.card h3{font-size:18px;margin-bottom:10px}
+.card p{font-size:12px;color:#9eafbd}
+.card .link{position:absolute;bottom:23px;color:var(--copper2);font-size:11px;font-weight:800;letter-spacing:1px}
+
+.solutions{background:#fff;color:#081526}
+.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.solution{min-height:190px;border:1px solid #dce3e9;padding:28px;border-radius:7px;transition:.3s;background:#fff}
+.solution:hover{box-shadow:0 15px 35px rgba(7,23,43,.1);transform:translateY(-4px)}
+.solution h3{font-size:18px;margin:12px 0 8px}
+.solution p{font-size:12px;color:#637180}
+
+.tech-sector{background:#0a1625;color:#fff}
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tech-panel{background:linear-gradient(145deg,#102943,#081726);border:1px solid rgba(255,255,255,.09);padding:30px;border-radius:9px;min-height:300px;transition:.3s}
+.tech-panel:hover{transform:translateY(-5px);border-color:rgba(229,138,77,.45);box-shadow:var(--shadow)}
+.tech-number{color:var(--copper2);font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:35px}
+.tech-panel h3{font-family:Montserrat;font-size:25px;margin-bottom:10px}
+.tech-panel p{font-size:12px;color:#aebdca;margin-bottom:20px}
+.tech-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tech-tags span{font-size:10px;color:#dce5eb;border:1px solid rgba(255,255,255,.12);padding:6px 9px;border-radius:20px}
+.feature{background:linear-gradient(110deg,#07172b,#0c2b49);position:relative;overflow:hidden}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.feature-image{height:480px;border-radius:10px;background:
+linear-gradient(0deg,rgba(4,12,20,.2),rgba(4,12,20,.05)),
+url("images/firefighting.svg") center/cover;box-shadow:var(--shadow)}
+.feature h2{font-family:Montserrat;font-size:clamp(32px,4vw,52px);line-height:1.1;margin-bottom:20px}
+.feature p{color:#b9c6d2;font-size:14px;margin-bottom:25px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:28px}
+.check{font-size:12px;color:#dbe4eb}.check:before{content:"✓";color:var(--copper2);font-weight:900;margin-right:9px}
+
+.industries{background:#050c15}
+.industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.industry{height:180px;border-radius:7px;overflow:hidden;position:relative;background-size:cover;background-position:center;display:flex;align-items:end}
+.industry:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.9))}
+.industry span{position:relative;z-index:1;padding:20px;font-weight:700;font-size:15px}
+
+.projects{background:#f4f7fa;color:#07172b}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(7,23,43,.07)}
+.project-img{height:210px;background-size:cover;background-position:center}
+.project-body{padding:23px}
+.project-body small{color:var(--copper);font-weight:800;font-size:10px;letter-spacing:1.4px;text-transform:uppercase}
+.project-body h3{margin:8px 0;font-size:18px}
+.project-body p{font-size:12px;color:#687887}
+
+.quote{background:linear-gradient(120deg,#091a2d,#07101c);position:relative}
+.quote-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:start}
+.quote h2{font-family:Montserrat;font-size:clamp(34px,4vw,53px);line-height:1.08;margin-bottom:18px}
+.quote p{color:#aebdca;font-size:14px}
+.contact-points{margin-top:28px;display:grid;gap:13px}
+.contact-point{font-size:13px;color:#d7e0e7}
+.form{background:#fff;padding:28px;border-radius:9px;color:#081526;box-shadow:var(--shadow)}
+.form h3{font-size:22px;margin-bottom:20px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field.full{grid-column:1/-1}
+.field label{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;color:#536273}
+.field input,.field select,.field textarea{width:100%;border:1px solid #d5dee6;border-radius:5px;padding:12px;font:inherit;font-size:13px;outline:none;background:#fafcfd}
+.field textarea{min-height:110px;resize:vertical}
+.form .btn{border:0;margin-top:15px;width:100%;cursor:pointer}
+
+footer{background:#03070d;padding:55px 0 20px;border-top:1px solid rgba(255,255,255,.08)}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:45px}
+.footer-logo{width:210px;margin-bottom:15px}
+footer p,footer a{color:#8f9dab;font-size:12px}
+footer h4{font-size:13px;margin-bottom:14px}
+.footer-links{display:grid;gap:8px}
+.copyright{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;color:#64717e;font-size:10px}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.modal.show{display:flex}
+.modal-box{width:min(900px,100%);max-height:90vh;overflow:auto;background:#fff;color:#081526;border-radius:10px;padding:30px}
+.modal-top{display:flex;justify-content:space-between;gap:20px;align-items:start}
+.close{border:0;background:#edf1f4;border-radius:50%;width:35px;height:35px;cursor:pointer;font-size:20px}
+.product-detail{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:20px}
+.detail-image{height:320px;border-radius:8px;background:linear-gradient(135deg,#0c2743,#163d5f);display:grid;place-items:center;font-size:80px}
+.detail h3{font-family:Montserrat;font-size:30px;line-height:1.1;margin-bottom:13px}
+.specs{margin-top:18px;border-top:1px solid #e0e6eb}
+.spec-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #e0e6eb;font-size:12px}
+.searchbar{display:flex;gap:10px;margin-bottom:25px}
+.searchbar input{flex:1;padding:14px;border:1px solid #d7e0e7;border-radius:5px;font:inherit}
+.hidden{display:none!important}
+
+@media(max-width:1000px){
+  .tech-grid{grid-template-columns:1fr 1fr}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .industry-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  nav{gap:15px}
+}
+@media(max-width:760px){
+  .topbar .inner{justify-content:center}.toplinks{display:none}
+  header{top:38px}.nav{height:72px}
+  .logo{width:175px}
+  .menu-btn{display:block}
+  nav{display:none;position:absolute;top:72px;left:0;right:0;background:#061322;padding:18px;flex-direction:column;align-items:stretch}
+  nav.open{display:flex}
+  nav a{padding:9px 4px}
+  nav .quote-btn{text-align:center}
+  .hero{min-height:700px}
+  .stats{position:relative;right:auto;bottom:auto;margin-top:45px;gap:25px;flex-wrap:wrap}
+  .hero-content{padding-top:130px}
+  .section-head{display:block}.section-head p{margin-top:15px}
+  .feature-grid,.quote-grid,.product-detail,.tech-grid{grid-template-columns:1fr}
+  .trade-inner{display:block}.trade-points{justify-content:flex-start;margin-top:18px}
+  .feature-image{height:330px}
+  .solution-grid,.project-grid{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:1fr 1fr}
+  .fields{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+  .footer-grid{grid-template-columns:1fr}
+  section{padding:70px 0}
+}
+@media(max-width:460px){
+  .product-grid{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:1fr}
+  h1{font-size:43px}
+}
+
+.logo{height:auto;min-height:42px;object-fit:contain}
+.hero{background-image:linear-gradient(90deg,rgba(2,8,15,.90),rgba(4,16,29,.72)),url("images/hero.svg")}
+.feature-image{background-image:linear-gradient(0deg,rgba(4,12,20,.18),rgba(4,12,20,.05)),url("images/firefighting.svg")}
+
+.contact-point a{color:#e58a4d;text-decoration:none}
+.contact-point a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container inner">
+    <div>APEXSTAR MIDDLE EAST FZ LLC · Ras Al Khaimah, UAE</div>
+    <div class="toplinks"><span>Fire & Life Safety Products</span><span>Technical Solutions</span></div>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#home"><img class="logo" src="images/logo.png alt="APEXSTAR Middle East FZ LLC"></a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="mainNav">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#products" onclick="closeMenu()">Products</a>
+      <a href="#solutions" onclick="closeMenu()">Solutions</a>
+      <a href="#industries" onclick="closeMenu()">Industries</a><a href="#technology" onclick="closeMenu()">Technology</a>
+      <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#contact" class="quote-btn" onclick="closeMenu()">Request a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Supply & Trading · UAE</div>
+      <h1>Reliable Products.<br><span>Ready for Your Project.</span></h1>
+      <p>APEXSTAR MIDDLE EAST FZ LLC is a UAE-based supply and trading company providing fire & life safety, ELV, security and home automation products to contractors, consultants, system integrators, traders and project customers.</p>
+      <div class="actions">
+        <a class="btn primary" href="#products">Explore Products →</a>
+        <a class="btn secondary" href="#contact">Request a Quote</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>4</strong><span>Core Sectors</span></div>
+        <div class="stat"><strong>UAE</strong><span>Based</span></div>
+        <div class="stat"><strong>UAE</strong><span>Supply Market</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="trade-strip">
+  <div class="container trade-inner">
+    <div><div class="kicker">APEXSTAR Business Model</div><h2>Supply. Trade. Deliver.</h2></div>
+    <div class="trade-points">
+      <span>✓ Product Sourcing</span>
+      <span>✓ Wholesale & Project Supply</span>
+      <span>✓ Local & International Trading</span>
+      <span>✓ Product Enquiries & Quotations</span>
+    </div>
+  </div>
+</section>
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Product Portfolio</div><h2>Integrated Technology Solutions</h2></div>
+      <p>Explore fire protection, ELV, security, networking and smart automation products for modern buildings.</p>
+    </div>
+    <div class="searchbar">
+      <input id="productSearch" oninput="filterProducts()" placeholder="Search products, systems or applications...">
+    </div>
+    <div class="product-grid" id="productGrid">
+      <article class="card product-card" data-search="fire alarm addressable conventional panel detector smoke heat beam manual call point sounder">
+        <div class="icon">🔥</div><h3>Fire Alarm Systems</h3><p>Addressable and conventional detection, alarm panels, detectors, MCPs, sounders and notification devices.</p><button class="link" onclick="openProduct('Fire Alarm Systems','🔥','Detection, alarm and notification solutions for reliable fire event management.','Addressable / Conventional','Commercial & Industrial')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="fire fighting pumps hydrant hose reel wet riser dry riser">
+        <div class="icon">💧</div><h3>Fire Fighting Systems</h3><p>Engineered fire water systems including pumps, hydrants, hose reels, wet risers and dry risers.</p><button class="link" onclick="openProduct('Fire Fighting Systems','💧','Complete fire water protection systems for buildings and industrial facilities.','Fire Water / Mechanical','Buildings & Industrial')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="sprinkler sprinkler head valve flow switch alarm valve deluge">
+        <div class="icon">💦</div><h3>Sprinkler Systems</h3><p>Automatic sprinkler protection, valves, flow switches, alarm valves and water control equipment.</p><button class="link" onclick="openProduct('Sprinkler Systems','💦','Automatic sprinkler solutions designed to control fire growth and protect property.','Wet / Dry / Deluge','Commercial & Industrial')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="fm200 clean agent co2 foam kitchen suppression fire suppression">
+        <div class="icon">🧯</div><h3>Fire Suppression</h3><p>Clean agent, FM-200, CO₂, foam and special hazard suppression applications.</p><button class="link" onclick="openProduct('Fire Suppression','🧯','Special hazard and automatic suppression solutions for critical environments.','Clean Agent / Special Hazard','Data & Critical Facilities')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="emergency lighting exit">
+        <div class="icon">💡</div><h3>Emergency Lighting</h3><p>Emergency and escape-route lighting designed to support safe evacuation during power failure.</p><button class="link" onclick="openProduct('Emergency Lighting','💡','Emergency and exit lighting solutions for life safety and evacuation.','Emergency / Exit','All Building Types')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="central battery cbs emergency power">
+        <div class="icon">🔋</div><h3>Central Battery Systems</h3><p>Centralized emergency power solutions for lighting and life safety installations.</p><button class="link" onclick="openProduct('Central Battery Systems','🔋','Centralized emergency power and monitoring solutions.','CBS','Commercial & Industrial')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="passive fire firestop fire door fire stopping">
+        <div class="icon">🛡️</div><h3>Passive Fire Protection</h3><p>Fire stopping, penetration sealing and passive protection solutions for building elements.</p><button class="link" onclick="openProduct('Passive Fire Protection','🛡️','Passive fire protection solutions for compartments, penetrations and building elements.','Firestop / Passive','Buildings')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="fire extinguisher extinguisher accessories">
+        <div class="icon">🧰</div><h3>Fire Safety Equipment</h3><p>Portable fire extinguishers, safety accessories and supporting fire protection equipment.</p><button class="link" onclick="openProduct('Fire Safety Equipment','🧰','Supporting equipment for building fire safety and first response.','Portable / Accessories','All Building Types')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="ELV CCTV surveillance camera IP camera access control door access intercom video door phone structured cabling data networking fiber optic public address audio visual">
+        <div class="icon">📡</div><h3>ELV Solutions</h3><p>Integrated extra-low-voltage systems including CCTV, access control, intercom, networking, structured cabling and AV.</p><button class="link" onclick="openProduct('ELV Solutions','📡','Integrated extra-low-voltage solutions for security, communication, networking and building technology.','CCTV / Access / Networking / AV','Commercial, Residential & Industrial')">VIEW PRODUCTS →</button>
+      </article>
+      <article class="card product-card" data-search="home automation smart home building automation KNX smart lighting curtains HVAC thermostat door lock video intercom scene control">
+        <div class="icon">🏠</div><h3>Home Automation</h3><p>Smart home and building automation for lighting, curtains, climate, access, scenes and centralized control.</p><button class="link" onclick="openProduct('Home Automation','🏠','Smart automation solutions for residential and premium building environments.','Lighting / HVAC / Curtains / Access','Villas, Apartments & Buildings')">VIEW PRODUCTS →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="solutions" id="solutions">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Our Business</div><h2>Supply & Trading</h2></div>
+      <p>APEXSTAR focuses on product sourcing, supply and trading for fire protection, ELV, security and smart building products.</p>
+    </div>
+    <div class="solution-grid">
+      <div class="solution"><div class="icon">⚙</div><h3>Product Sourcing</h3><p>Sourcing and supplying products according to project requirements.</p></div>
+      <div class="solution"><div class="icon">📦</div><h3>Supply</h3><p>Fire protection and technology products for project requirements.</p></div>
+      <div class="solution"><div class="icon">🔧</div><h3>Product Supply</h3><p>Supply of products to contractors, integrators, traders and project customers.</p></div>
+      <div class="solution"><div class="icon">✓</div><h3>Product Support</h3><p>Product information, datasheets and commercial support for supplied products.</p></div>
+      <div class="solution"><div class="icon">🛠</div><h3>Trading</h3><p>Trading and distribution of selected fire, ELV and smart building product categories.</p></div>
+      <div class="solution"><div class="icon">♻</div><h3>Project Supply</h3><p>Product supply for new projects, replacement requirements and system upgrades.</p></div>
+      <div class="solution"><div class="icon">📹</div><h3>ELV & Security Supply</h3><p>CCTV, access control, intercom, structured cabling, networking and integrated security systems.</p></div>
+      <div class="solution"><div class="icon">🏠</div><h3>Home Automation Supply</h3><p>Supply and trading of smart lighting, curtains, HVAC control, smart locks, scenes and home automation products.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tech-sector" id="technology">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Technology Sectors</div><h2>Beyond Fire Protection</h2></div>
+      <p>APEXSTAR can bring safety, security, connectivity and automation together into one coordinated technology package.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-panel">
+        <div class="tech-number">01</div>
+        <h3>ELV & Security Supply</h3>
+        <p>Supply and trading of CCTV, access control, intercom, networking, structured cabling and related ELV products.</p>
+        <div class="tech-tags">
+          <span>CCTV</span><span>Access Control</span><span>Intercom</span><span>Video Door Phone</span>
+          <span>Structured Cabling</span><span>Data Networking</span><span>Fiber Optics</span><span>PA / Audio</span>
+        </div>
+      </div>
+      <div class="tech-panel">
+        <div class="tech-number">02</div>
+        <h3>Home Automation</h3>
+        <p>Smart control solutions that make homes and premium spaces safer, more comfortable and efficient.</p>
+        <div class="tech-tags">
+          <span>Smart Lighting</span><span>Motorized Curtains</span><span>HVAC Control</span><span>Smart Locks</span>
+          <span>Scenes</span><span>Touch Panels</span><span>Mobile Control</span><span>Voice Integration</span>
+        </div>
+      </div>
+      <div class="tech-panel">
+        <div class="tech-number">03</div>
+        <h3>Smart Building Products</h3>
+        <p>Supply of smart building products for monitoring, control and automation applications.</p>
+        <div class="tech-tags">
+          <span>Smart Building</span><span>Energy Monitoring</span><span>Central Control</span><span>System Integration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="about">
+  <div class="container feature-grid">
+    <div class="feature-image"></div>
+    <div>
+      <div class="kicker">About APEXSTAR</div>
+      <h2>Products supplied for your project.</h2>
+      <p>APEXSTAR MIDDLE EAST FZ LLC, based in Ras Al Khaimah, UAE, focuses on the supply and trading of fire & life safety, ELV, security and home automation products.</p>
+      <div class="checks">
+        <div class="check">Fire alarm products</div>
+        <div class="check">Fire fighting products</div>
+        <div class="check">Sprinkler products</div>
+        <div class="check">Fire suppression products</div>
+        <div class="check">ELV & security products</div>
+        <div class="check">Home automation products</div>
+      </div>
+      <a class="btn primary" href="#contact">Send Product Enquiry →</a>
+    </div>
+  </div>
+</section>
+
+<section class="industries" id="industries">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Applications</div><h2>Industries We Serve</h2></div>
+      <p>Solutions can be configured around the specific risk profile and operational needs of each facility.</p>
+    </div>
+    <div class="industry-grid">
+      <div class="industry" style="background-image:url('images/smart-building.svg')"><span>Commercial Buildings</span></div>
+      <div class="industry" style="background-image:url('images/projects.svg')"><span>Hotels & Hospitality</span></div>
+      <div class="industry" style="background-image:url('images/firefighting.svg')"><span>Industrial Facilities</span></div>
+      <div class="industry" style="background-image:url('images/elv.svg')"><span>Warehousing</span></div>
+      <div class="industry" style="background-image:url('images/fire-alarm.svg')"><span>Healthcare</span></div>
+      <div class="industry" style="background-image:url('images/automation.svg')"><span>Data & Critical Facilities</span></div>
+      <div class="industry" style="background-image:url('images/sprinkler.svg')"><span>Residential</span></div>
+      <div class="industry" style="background-image:url('images/suppression.svg')"><span>Infrastructure</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Product Categories</div><h2>What We Supply</h2></div>
+      <p>APEXSTAR supplies a broad range of products for fire protection, ELV, security and smart building applications.</p>
+    </div>
+    <div class="project-grid">
+      <div class="project"><div class="project-img" style="background-image:url('images/automation.svg')"></div><div class="project-body"><small>Fire Protection</small><h3>Fire & Life Safety Products</h3><p>Fire alarm, firefighting, sprinkler, suppression, emergency lighting and passive fire protection products.</p></div></div>
+      <div class="project"><div class="project-img" style="background-image:url('images/elv.svg')"></div><div class="project-body"><small>ELV & Security</small><h3>ELV Product Supply</h3><p>CCTV, access control, intercom, networking, structured cabling, fiber and related low-current products.</p></div></div>
+      <div class="project"><div class="project-img" style="background-image:url('images/automation.svg')"></div><div class="project-body"><small>Smart Technology</small><h3>Home Automation Products</h3><p>Smart lighting, curtains, HVAC control, smart locks, panels, scenes and connected home products.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="quotesection class="quote" id="contact">
+  <div class="container quote-grid">
+    <div>
+      <div class="kicker">Product Enquiry</div>
+      <h2>Tell us what products you need.</h2>
+      <p>Send your product requirement, BOQ or enquiry and the APEXSTAR team can respond with product and commercial information.</p>
+      <div class="contact-points">
+        <div class="contact-point">📍 Ras Al Khaimah, United Arab Emirates</div>
+        <div class="contact-point">✉ <a href="mailto:info@apexstaruae.com">info@apexstaruae.com</a> <small></div>
+        <div class="contact-point">📱 <a href="tel:+971527233172">+971 527233172</a></div><div class="contact-point">💬 <a href="https://wa.me/971527233172" target="_blank">WhatsApp: +971 527233172</a> <small></div>
+      </div>
+    </div>
+    <form class="form" onsubmit="submitQuote(event)">
+      <h3>Request a Product Quote</h3>
+      <div class="fields">
+        <div class="field"><label>Name *</label><input required id="qname"></div>
+        <div class="field"><label>Company</label><input id="qcompany"></div>
+        <div class="field"><label>Email *</label><input required type="email" id="qemail"></div>
+        <div class="field"><label>Mobile</label><input id="qmobile"></div>
+        <div class="field"><label>Delivery / Project Location</label><input id="qlocation" value="UAE"></div>
+        <div class="field"><label>Requirement</label><select id="qtype"><option>Fire Alarm</option><option>Fire Fighting</option><option>Sprinkler</option><option>Fire Suppression</option><option>Emergency Lighting</option><option>Passive Fire Protection</option><option>Other</option></select></div>
+        <div class="field full"><label>Product Requirement</label><textarea id="qmessage" placeholder="Tell us the products, brands, quantities, BOQ items or specifications you need."></textarea></div>
+      </div>
+      <button class="btn primary" type="submit">SEND PRODUCT ENQUIRY →</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="images/logo.png alt="APEXSTAR">
+        <p>APEXSTAR MIDDLE EAST FZ LLC<br>Ras Al Khaimah, United Arab Emirates.</p>
+      </div>
+      <div><h4>Products</h4><div class="footer-links"><a href="#products">Fire Alarm</a><a href="#products">Fire Fighting</a><a href="#products">Sprinkler</a><a href="#products">Fire Suppression</a><a href="#products">ELV Solutions</a><a href="#products">Home Automation</a></div>
+      <div><h4>Solutions</h4><div class="footer-links"><a href="#solutions">Engineering</a><a href="#solutions">Product Supply</a><a href="#solutions">Commissioning</a><a href="#solutions">Maintenance</a><a href="#technology">ELV & Security Supply</a><a href="#technology">Smart Building</a></div></div>
+      <div><h4>Company</h4><div class="footer-links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div></div>
+    </div>
+    <div class="copyright"><span>© 2026 APEXSTAR MIDDLE EAST FZ LLC. All rights reserved. | Supply & Trading</span><span>Supply & Trading · UAE</span></div>
+  </div>
+</footer>
+
+<div class="modal" id="productModal" onclick="closeModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-top"><div><div class="kicker">Product Category</div><h2 id="modalTitle"></h2></div><button class="close" onclick="closeModal()">×</button></div>
+    <div class="product-detail">
+      <div class="detail-image" id="modalIcon"></div>
+      <div class="detail">
+        <h3 id="detailTitle"></h3>
+        <p id="detailText"></p>
+        <div class="specs">
+          <div class="spec-row"><strong>System</strong><span id="detailSystem"></span></div>
+          <div class="spec-row"><strong>Applications</strong><span id="detailApplications"></span></div>
+          <div class="spec-row"><strong>Availability</strong><span>Request quotation</span></div>
+        </div>
+        <a class="btn primary" style="margin-top:20px" href="#contact" onclick="closeModal()">REQUEST QUOTE →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMenu(){document.getElementById('mainNav').classList.toggle('open')}
+function closeMenu(){document.getElementById('mainNav').classList.remove('open')}
+function filterProducts(){
+  const q=document.getElementById('productSearch').value.toLowerCase().trim();
+  document.querySelectorAll('.product-card').forEach(card=>{
+    card.classList.toggle('hidden', q && !card.dataset.search.includes(q));
+  });
+}
+function openProduct(title,icon,text,system,applications){
+  document.getElementById('modalTitle').textContent=title;
+  document.getElementById('detailTitle').textContent=title;
+  document.getElementById('modalIcon').textContent=icon;
+  document.getElementById('detailText').textContent=text;
+  document.getElementById('detailSystem').textContent=system;
+  document.getElementById('detailApplications').textContent=applications;
+  document.getElementById('productModal').classList.add('show');
+}
+function closeModal(e){
+  if(!e || e.target.id==='productModal') document.getElementById('productModal').classList.remove('show');
+}
+function submitQuote(e){
+  e.preventDefault();
+  const name=document.getElementById('qname').value;
+  const company=document.getElementById('qcompany').value;
+  const email=document.getElementById('qemail').value;
+  const mobile=document.getElementById('qmobile').value;
+  const location=document.getElementById('qlocation').value;
+  const type=document.getElementById('qtype').value;
+  const message=document.getElementById('qmessage').value;
+  const subject=encodeURIComponent('APEXSTAR Product Enquiry - '+type);
+  const body=encodeURIComponent(
+    'Name: '+name+'\nCompany: '+company+'\nEmail: '+email+
+    '\nMobile: '+mobile+'\nDelivery / Project Location: '+location+
+    '\nRequirement: '+type+'\n\nProduct Requirement:\n'+message
+  );
+  window.location.href='mailto:info@apexstaruae.com?subject='+subject+'&body='+body;
+}
+</script>
+</body>
+</html>
