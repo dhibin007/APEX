@@ -36,7 +36,7 @@ nav a:hover{color:var(--copper2)}
 
 .hero{min-height:790px;display:flex;align-items:center;position:relative;overflow:hidden;background:
 radial-gradient(circle at 75% 35%,rgba(200,109,54,.22),transparent 28%),
-linear-gradient(90deg,rgba(2,8,15,.97) 0%,rgba(4,16,29,.88) 48%,rgba(4,14,25,.65) 100%),
+linear-gradient(90deg,rgba(182, 194, 207, 0.97) 0%,rgba(4,16,29,.88) 48%,rgba(4,14,25,.65) 100%),
 url("images/hero.svg") center/cover;}
 .hero:after{content:"";position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(transparent,var(--dark));}
 .hero-content{position:relative;z-index:2;padding-top:100px;max-width:770px}
@@ -194,9 +194,6 @@ footer h4{font-size:13px;margin-bottom:14px}
 .logo{height:auto;min-height:42px;object-fit:contain}
 .hero{background-image:linear-gradient(90deg,rgba(2,8,15,.90),rgba(4,16,29,.72)),url("images/hero.svg")}
 .feature-image{background-image:linear-gradient(0deg,rgba(4,12,20,.18),rgba(4,12,20,.05)),url("images/firefighting.svg")}
-
-.contact-point a{color:#e58a4d;text-decoration:none}
-.contact-point a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -210,7 +207,7 @@ footer h4{font-size:13px;margin-bottom:14px}
 
 <header>
   <div class="container nav">
-    <a href="#home"><img class="logo" src="images/logo.png alt="APEXSTAR Middle East FZ LLC"></a>
+    <a href="#home"><img class="logo" src="images/logo.png" alt="APEXSTAR Middle East FZ LLC"></a>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
     <nav id="mainNav">
       <a href="#home" onclick="closeMenu()">Home</a>
@@ -417,8 +414,8 @@ footer h4{font-size:13px;margin-bottom:14px}
       <p>Send your product requirement, BOQ or enquiry and the APEXSTAR team can respond with product and commercial information.</p>
       <div class="contact-points">
         <div class="contact-point">📍 Ras Al Khaimah, United Arab Emirates</div>
-        <div class="contact-point">✉ <a href="mailto:info@apexstaruae.com">info@apexstaruae.com</a> <small></div>
-        <div class="contact-point">📱 <a href="tel:+971527233172">+971 527233172</a></div><div class="contact-point">💬 <a href="https://wa.me/971527233172" target="_blank">WhatsApp: +971 527233172</a> <small></div>
+        <div class="contact-point">✉ apexstaruae.COM </small>/div>
+        <div class="contact-point">📱 +971 52 7233172 <small></div>
       </div>
     </div>
     <form class="form" onsubmit="submitQuote(event)">
@@ -442,10 +439,10 @@ footer h4{font-size:13px;margin-bottom:14px}
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" src="images/logo.png alt="APEXSTAR">
+        <img class="footer-logo" src="images/logo.png" alt="APEXSTAR">
         <p>APEXSTAR MIDDLE EAST FZ LLC<br>Ras Al Khaimah, United Arab Emirates.</p>
       </div>
-      <div><h4>Products</h4><div class="footer-links"><a href="#products">Fire Alarm</a><a href="#products">Fire Fighting</a><a href="#products">Sprinkler</a><a href="#products">Fire Suppression</a><a href="#products">ELV Solutions</a><a href="#products">Home Automation</a></div>
+      <div><h4>Products</h4><div class="footer-links"><a href="#products">Fire Alarm</a><a href="#products">Fire Fighting</a><a href="#products">Sprinkler</a><a href="#products">Fire Suppression</a><a href="#products">ELV Solutions</a><a href="#products">Home Automation</a></div></div>
       <div><h4>Solutions</h4><div class="footer-links"><a href="#solutions">Engineering</a><a href="#solutions">Product Supply</a><a href="#solutions">Commissioning</a><a href="#solutions">Maintenance</a><a href="#technology">ELV & Security Supply</a><a href="#technology">Smart Building</a></div></div>
       <div><h4>Company</h4><div class="footer-links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div></div>
     </div>
@@ -508,7 +505,7 @@ function submitQuote(e){
     '\nMobile: '+mobile+'\nDelivery / Project Location: '+location+
     '\nRequirement: '+type+'\n\nProduct Requirement:\n'+message
   );
-  window.location.href='mailto:info@apexstaruae.com?subject='+subject+'&body='+body;
+  window.location.href='mailto:YOUR_EMAIL@YOURDOMAIN.COM?subject='+subject+'&body='+body;
 }
 </script>
 </body>
